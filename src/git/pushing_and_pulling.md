@@ -31,6 +31,12 @@ hint: invocation.
 
 It is likely that your branches don't perfectly line up, usually because master recieved a commit since the branch was made. Or, even more likely, someone else pushed to master while you were working. In this scenario you have two options, merging or rebasing.
 
+```
+o---o---o---A---B---C master
+	     \
+		  X---Y---Z  my_branch
+```
+
 ### Rebasing
 In this option, commits are added back in time. This is perfect if the difference between the branches is very small. If there are conflicts, you will have to fix them for every single differing commit. It means that history will be preserved, and no commits will be lost.
 
@@ -39,6 +45,14 @@ You can initiate a rebase by using:
 git pull --rebase
 git push --rebase
 ```
+
+Rebasing will result in:
+```
+o---o---o---X---Y---Z---A---B---C master
+	     \          /
+          X---Y---Z  my_branch
+```
+
 ### Merging
 In this option, differing commits are squashed (this is the actual term for this) into a single commit. None of your changes will be lost, but the history won't be as clear. This is a good option if the amount of commits that you are pushing or pulling is very large, because you will only have to fix conflicts once.
 
@@ -46,6 +60,12 @@ You can merge using:
 ```sh
 git pull --merge
 git push --merge
+```
+Merging will result in:
+```
+o---o---o---A---B---C---D master
+	     \             /
+		  X---Y---Z -- my_branch
 ```
 
 ## Merge conflicts

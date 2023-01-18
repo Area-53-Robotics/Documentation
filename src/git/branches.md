@@ -1,5 +1,10 @@
 # Branches
 Branches are an exceptionally powerful tool, that can be used to develop features without endangering your main code. If you think of your commit history as a timeline, and your commits as points along that timeline, then a branch is a fork in that timeline. You start with an existing branch, usually called master.
+```
+o---o---o  master
+	     \
+		  X---Y---Z  my_branch
+```
 
 You can create a new branch based on your latest commit using:
 ```sh
