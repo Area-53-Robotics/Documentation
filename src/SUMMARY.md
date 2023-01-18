@@ -8,3 +8,5 @@
     - [Pushing and Pulling](git/pushing_and_pulling.md)
     - [Remote Branches](git/remote_branches.md)
     - [Restore and Reset](git/restore_and_reset.md)
+[Resources](resources.md)
+[Glossary](glossary.md)

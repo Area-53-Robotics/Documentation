@@ -1,3 +1,6 @@
 HEAD
 origin
-pros
+PROS
+API
+GCC
+Make

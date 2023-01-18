@@ -25,7 +25,7 @@ git commit -m "My first commit"
 ```
 This will create a commit with the message "My first commit".
 
-> Your commit names are important. They should describe the changes you made. If you notice that you can't summarize your changes in one scentence because you made too many changes, consider making multiple commits. 
+> Note: Your commit names are important. They should describe the changes you made. If you notice that you can't summarize your changes in one scentence because you made too many changes, consider making multiple commits. 
 
 # .gitignore
 Some files you don't want to be tracked by git. Files containing secrets, binaries, and compressed files are all in this category. As a general rule of thumb, files that don't have contents that can be read by humans shouldn't be tracked by git. If you read the file, and all you see is unreadable gibberish (code you don't understand doesn't count), don't stage it.
