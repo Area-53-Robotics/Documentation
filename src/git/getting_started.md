@@ -44,3 +44,10 @@ Verify that git is installed by running
 git --version
 ```
 in your terminal of choice.
+
+Make your first git project using:
+```sh
+git init # Make sure you run this in the correct folder
+
+git status # Verify that the command worked
+```
