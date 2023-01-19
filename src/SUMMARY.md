@@ -1,11 +1,12 @@
 # Table of Contents
-[Introduction](./introduction.md)
+[Introduction](introduction.md)
 - [Basics of C++](basics/basics.md)
     - [variables](basics/variables.md)
 - [Pros](pros/pros.md)
   - [Getting Started](pros/getting_started.md)
   - [Default Project Structure](pros/default_project_structure.md)
   - [Drive Code](pros/drive_code.md)
+  - [Buttons](pros/buttons.md)
 - [Git](git/git.md)
     - [Getting Started](git/getting_started.md)
     - [Commits and Staging](git/commits_and_staging.md)

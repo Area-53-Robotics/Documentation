@@ -27,11 +27,11 @@ Most of these files are automatically generated, and should not be touched. Src 
 main.cpp contains these functions:
 ```cpp
 // main.cpp
-void initialize() {}
-void disabled() {}
-void competition_initialize() {}
-void autonomous() {}
-void opcontrol() {}
+void initialize() {};
+void disabled() {};
+void competition_initialize() {};
+void autonomous() {};
+void opcontrol() {};
 ```
 Most of these functions are self explanatory, and have comments describing their purpose.
 
