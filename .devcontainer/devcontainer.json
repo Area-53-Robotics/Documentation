@@ -1,5 +1,6 @@
 {
-   "dockerFile": "Dockerfile",
-  "features": {
-  }
+	"image": "mcr.microsoft.com/devcontainers/base:debian",
+	"features": {
+		"ghcr.io/devcontainers/features/rust:1": {}
+	}
 }
