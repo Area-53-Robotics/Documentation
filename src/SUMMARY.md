@@ -1,7 +1,10 @@
 # Table of Contents
 [Introduction](introduction.md)
 - [Basics of C++](basics/basics.md)
-    - [variables](basics/variables.md)
+    - [Variables](basics/variables.md)
+    - [Headers](basics/headers.md)
+    - [Namespaces](basics/namespaces.md)
+    - [Functions](basics/functions.md)
 - [Pros](pros/pros.md)
   - [Getting Started](pros/getting_started.md)
   - [Default Project Structure](pros/default_project_structure.md)
