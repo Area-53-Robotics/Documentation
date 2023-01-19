@@ -7,3 +7,4 @@ It has many existing supporting libraries, including:
 - Okapilib
 - ARMS
 - LEGS
+- EZ Template
