@@ -10,4 +10,5 @@ The guide goes in chronological order, so later chapters assume you know what wa
 
 ## About the Authors
 Felix Hass - Believes that rust is definetly better than C++.
+
 Isaiah Blanc - Is mad that Felix spelled "definitely" wrong.

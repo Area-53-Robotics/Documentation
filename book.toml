@@ -6,3 +6,5 @@ src = "src"
 title = "Area 53 Robotics"
 preferred-dark-theme = "ayu"
 
+[output.html]
+additional-css = ["./theme/catppuccin.css", "./theme/catppuccin-highlight.css", "./theme/alien.css", "./theme/alien-highlight.css"]
