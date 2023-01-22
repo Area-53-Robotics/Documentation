@@ -1,4 +1,4 @@
-# Drive Code
+# Tank Drive
 The first step of creating the basic code to control your robot is to define your devices.
 ```cpp
 using namespace pros;
@@ -58,26 +58,3 @@ void opcontrol() {
   }
 ```
 This code will result in the drive controlling one half on the robot with one joystick, and the other half with the other.
-
-## Arcade Drive
-This is an alternate control scheme where one joystick controls forwards and backwards, and the other controls turning. Most people use tank drive, but the option exists.
-```cpp
-void opcontrol() {
-  pros::Motor motor_left (1);
-  pros::Motor motor_right (2, true);
-  pros::Controller controller (CONTROLLER_MASTER);
-
-  while (true) {
-    int power = master.get_analog(ANALOG_LEFT_Y);
-    int turn = master.get_analog(ANALOG_RIGHT_X);
-    int left = power + turn;
-    int right = power - turn;
-    motor_left.move(left);
-    motor_right.move(right);
-
-    pros::delay(2);
-  }
-}
-
-```
-
