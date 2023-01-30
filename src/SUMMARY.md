@@ -7,6 +7,7 @@
     - [Namespaces](basics/namespaces.md)
     - [Functions](basics/functions.md)
     - [Conventions](basics/conventions.md)
+- [Object Oriented Programming](oop/oop.md)
 - [Pros](pros/pros.md)
   - [Getting Started](pros/getting-started.md)
   - [Default Project Structure](pros/default-project-structure.md)
