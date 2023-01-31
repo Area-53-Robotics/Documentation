@@ -1,5 +1,4 @@
-# Conventions
-Coding conventions are general guidelines for creating clean, readable, structured, and interpretable code. While you can make a program following no coding conventions that works well, following some form of conventions can make mistakes less likely and collaboration much, much easier. Furthermore, it can be helpful for impressing judges. Here are some conventions we've compiled that you may find useful for your programs.
+
 
 ## Naming conventions
 ### Be descriptive!!!
@@ -16,8 +15,8 @@ int autonomous_selection; // Yes
 int J1; // No
 int right_x_axis; // Yes
 
-motor LeftMotor(1); // No
-motor left_motor(1); // Yes
+Motor LeftMotor(1); // No
+Motor left_motor(1); // Yes
 
 int DriveCurve(int x); // No
 int drive_curve(int input); // Yes

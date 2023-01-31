@@ -10,6 +10,8 @@
 
 [Google naming conventions](https://google.github.io/styleguide/cppguide.html#Variable_Names)
 
+[Commenting Guide](https://stackoverflow.blog/2021/12/23/best-practices-for-writing-code-comments/)
+
 ## Libraries for PROS
 
 [Okapilib](https://okapilib.github.io/OkapiLib/index.html)
