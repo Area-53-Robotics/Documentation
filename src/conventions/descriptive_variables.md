@@ -32,6 +32,6 @@ double dist_traveled = encoder.get_value() * CIRCUMFERENCE / 360
 const float WHEEL_RADIUS = 2.75;
 const float CIRCUMFERENCE =  2 * M_PI * WHEEL_RADIUS;
 const float DIST_TRAVELED_PER_DEGREE =  CIRCUMFERENCE / 360;
-double dist_traveled = encoder.get_value() * CIRCUMFERENCE / 360
+double dist_traveled = encoder.get_value() * DIST_TRAVELED_PER_DEGREE;
 // This is maybe a little too explicit, but at least its very clear what's happening
 ```
