@@ -1,8 +1,11 @@
 # Resources
+
 ## Misc
 [Git Documentation](https://git-scm.com/doc)
 
 [Pros Documentatin](https://pros.cs.purdue.edu/v5/index.html)
+
+[Sigbots Wiki](https://wiki.purduesigbots.com/)
 
 ## Code Quality
 
@@ -23,3 +26,5 @@
 [Sylib](https://github.com/sy1vi3/sylib)
 
 [EZ Template](https://github.com/EZ-Robotics/EZ-Template)
+
+[LemLib](https://github.com/LemLib/LemLib)

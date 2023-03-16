@@ -36,7 +36,7 @@ If you use a different package manager, we trust you know what to do.
 ```sh
 git --version # will prompt you to install
 # or
-brew install git #requires homebrew package manager
+brew install git # requires homebrew package manager
 ```
 
 Verify that git is installed by running
@@ -45,6 +45,7 @@ git --version
 ```
 in your terminal of choice.
 
+## Your First Project
 Make your first git project using:
 ```sh
 git init # Make sure you run this in the correct folder

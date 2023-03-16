@@ -35,12 +35,19 @@ You can only define a function that has been forward declared once. It must matc
 The include macro copies and pastes the contents of the header into body files at compile time which means that if we're not careful, we can end up with multiple declarations of the same function, which will cause a compiler error. To solve this problem we have header guards.
 
 ```cpp
-#ifndef ADD_HPP
+#ifndef ADD_HPP // This name  must be unique, otherwise you will cause other headers to be ignored
 #define ADD_HPP
 
 int add(int x, int y);
 
 #endif
+```
+
+## Pragma Once
+
+Alternativly pragma once will do the same thing:
+```cpp
+#pragma once
 ```
 
 This ensures that add will only be copied once, even if it is included multiple times.
