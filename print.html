@@ -1,0 +1,1047 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Area 53 Robotics</title>
+        <meta name="robots" content="noindex" />
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="./theme/catppuccin.css">
+        <link rel="stylesheet" href="./theme/catppuccin-highlight.css">
+        <link rel="stylesheet" href="./theme/alien.css">
+        <link rel="stylesheet" href="./theme/alien-highlight.css">
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction/introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="introduction/programming-mindset.html"><strong aria-hidden="true">1.1.</strong> Programming Mindset</a></li></ol></li><li class="chapter-item expanded "><a href="basics/basics.html"><strong aria-hidden="true">2.</strong> Basics of C++</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="basics/variables.html"><strong aria-hidden="true">2.1.</strong> Variables</a></li><li class="chapter-item expanded "><a href="basics/functions.html"><strong aria-hidden="true">2.2.</strong> Functions</a></li><li class="chapter-item expanded "><a href="basics/scope.html"><strong aria-hidden="true">2.3.</strong> Scope</a></li><li class="chapter-item expanded "><a href="basics/headers.html"><strong aria-hidden="true">2.4.</strong> Headers</a></li><li class="chapter-item expanded "><a href="basics/namespaces.html"><strong aria-hidden="true">2.5.</strong> Namespaces</a></li></ol></li><li class="chapter-item expanded "><a href="conventions/conventions.html"><strong aria-hidden="true">3.</strong> Conventions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="conventions/descriptive_variables.html"><strong aria-hidden="true">3.1.</strong> Descriptive Names</a></li><li class="chapter-item expanded "><a href="conventions/naming_conventions.html"><strong aria-hidden="true">3.2.</strong> Naming Conventions</a></li><li class="chapter-item expanded "><a href="conventions/comments.html"><strong aria-hidden="true">3.3.</strong> Comments</a></li><li class="chapter-item expanded "><a href="conventions/program_organization.html"><strong aria-hidden="true">3.4.</strong> Program Structure</a></li></ol></li><li class="chapter-item expanded "><a href="oop/oop.html"><strong aria-hidden="true">4.</strong> Object Oriented Programming</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="oop/classes.html"><strong aria-hidden="true">4.1.</strong> Classes</a></li><li class="chapter-item expanded "><a href="oop/constructors.html"><strong aria-hidden="true">4.2.</strong> Constructors</a></li></ol></li><li class="chapter-item expanded "><a href="pros/pros.html"><strong aria-hidden="true">5.</strong> Pros</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="pros/getting-started.html"><strong aria-hidden="true">5.1.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="pros/default-project-structure.html"><strong aria-hidden="true">5.2.</strong> Default Project Structure</a></li><li class="chapter-item expanded "><a href="pros/buttons.html"><strong aria-hidden="true">5.3.</strong> Buttons</a></li></ol></li><li class="chapter-item expanded "><a href="examples/examples.html"><strong aria-hidden="true">6.</strong> Examples</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="examples/tank-drive.html"><strong aria-hidden="true">6.1.</strong> Tank Drive</a></li><li class="chapter-item expanded "><a href="examples/arcade-drive.html"><strong aria-hidden="true">6.2.</strong> Arcade Drive</a></li></ol></li><li class="chapter-item expanded "><a href="git/git.html"><strong aria-hidden="true">7.</strong> Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="git/getting-started.html"><strong aria-hidden="true">7.1.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="git/commits-and-staging.html"><strong aria-hidden="true">7.2.</strong> Commits and Staging</a></li><li class="chapter-item expanded "><a href="git/pushing-and-pulling.html"><strong aria-hidden="true">7.3.</strong> Pushing and Pulling</a></li><li class="chapter-item expanded "><a href="git/remote-branches.html"><strong aria-hidden="true">7.4.</strong> Remote Branches</a></li></ol></li><li class="chapter-item expanded "><a href="resources.html"><strong aria-hidden="true">8.</strong> Resources</a></li><li class="chapter-item expanded "><a href="glossary.html"><strong aria-hidden="true">9.</strong> Glossary</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="latte">Latte</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="frappe">Frappé</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="macchiato">Macchiato</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mocha">Mocha</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="alien">Alien</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Area 53 Robotics</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="area-53-robotics"><a class="header" href="#area-53-robotics">Area 53 Robotics</a></h1>
+<p>This is the <strong>ultimate</strong> guide to programming for VEX robotics.</p>
+<p>The goal of this guide is to provide a resource for programmers to get started, even if they no prior experience. It does not aim to be a replacement to the official documentation for the things covered, it just attemts to introduce new programmer to these concepts. </p>
+<p>The first section of this guide (the one you're in right now) is focused on non-technical aspects of being a VEX programmer, including information on the year's competition game as well as the intangibles of being a programmer.</p>
+<p>This guides covers everything from the basics of C++, to the basics of the different APIs, to quality of life tools like git, and clang-format, to naming conventions, to high level concepts like PID and odometry.</p>
+<p>The guide goes in chronological order, so later chapters assume you know what was covered in the earlier ones. If you're new to programming, we highly recommend you go through the sections in order, but if you're looking for specific examples, feel free to go straight to the examples section.</p>
+<h2 id="about-the-authors"><a class="header" href="#about-the-authors">About the Authors</a></h2>
+<p>Felix Hass - Believes that rust is definitely better than C++.</p>
+<p>Isaiah Blanc - Is mad that Felix spelled &quot;definitely&quot; wrong.</p>
+<p>Gavin Crisologo - Human incarnation of stress.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="programming-mindset"><a class="header" href="#programming-mindset">Programming Mindset</a></h1>
+<p>Much of programming is creating programs for your team's robot. But it's also much more than that.</p>
+<p>Being a programmer is about  You'll need to work with builders, squad leaders, drivers, notebookers, and even other programmers in order to be successful.</p>
+<h2 id="what-is-programming"><a class="header" href="#what-is-programming">What is programming?</a></h2>
+<p>In his first lecture for CS50 2022 (Harvard's introductory computer science course, <a href="https://www.edx.org/course/introduction-computer-science-harvardx-cs50x">which you can check out for free here</a>), David J. Malan states that computer science is &quot;all about information and...the solving of problems.&quot; This problem-solving process essentially boils down to the following diagram:</p>
+<pre><code class="language-mermaid">graph LR;
+	A(Input)--&gt;B(Program);
+	B--&gt;C(Output);
+</code></pre>
+<p>As a programmer, your main job is to make a <strong>Program</strong> that takes in information (<strong>Input</strong>) and does something with it to produce a desirable outcome (<strong>Output</strong>). Here's how this would work with drive code.</p>
+<ol>
+<li><strong>Input:</strong> The inputs are the joystick values sent from the controller to the robot.</li>
+<li><strong>Program:</strong> Code that takes the joystick inputs and uses them to send commands to the robot.</li>
+<li><strong>Output:</strong> The robot moves as the driver intended.</li>
+</ol>
+<p>You'll want to keep all three of these steps in mind when you're programming. Make sure you have all the sensors and peripherals you need for your <strong>Inputs</strong>. Then, find out how to use those inputs in your <strong>Program</strong> to perform some kind of action (<strong>Output</strong>). </p>
+<h2 id="programming-tips"><a class="header" href="#programming-tips">Programming Tips</a></h2>
+<ul>
+<li><strong>Communicate with your driver:</strong> Consult your team's driver on how they want to operate the robot using the controller. Design usercontrol code with their preferences in mind.
+<ul>
+<li>Furthermore, try to make their life as easy as possible during matches to give them an edge over other teams. Are there any difficult tasks that you can automate for them for more reliable scoring?</li>
+</ul>
+</li>
+<li><strong>Communicate with your builders and team leader:</strong> Work with your team to ensure that your bot has all the sensors you need for your program, and if you need sensors organized in a specific manner, let them know ahead of time so they can account for that in their design.
+<ul>
+<li>Don't be afraid to do some mechanical work, either! If you're asked to help with building the robot, lend an extra pair of hands. This can not only speed up the build process, but also give you a better feel for the robot you are programming for and its potential capabilities and limitations included.</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="basics-of-c"><a class="header" href="#basics-of-c">Basics of C++</a></h1>
+<p>C++ is used to program the VEX V5 brain. It has multiple notable features.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="variables"><a class="header" href="#variables">Variables</a></h1>
+<p>Variables are names associated with values. Different variables are specified by their name so other programmers can easily identify what the variable is for and what type of value it is associated.</p>
+<h2 id="initialization"><a class="header" href="#initialization">Initialization</a></h2>
+<p>variables definitions follow the pattern of:</p>
+<pre><code>datatype name = value;
+</code></pre>
+<p>for example:</p>
+<pre><code class="language-cpp">int number = 42;
+</code></pre>
+<p>In this example, we create a variable called number. It has value 42. We can display this value by using a print statement.</p>
+<pre><code class="language-cpp">printf(&quot;%i\n&quot;,number);
+//will display 42 to the terminal
+</code></pre>
+<blockquote>
+<p>Note: \n indicates a newline. We will cover printf more in depth in a later chapter.</p>
+</blockquote>
+<h2 id="datatypes"><a class="header" href="#datatypes">Datatypes</a></h2>
+<p>If you've used a language like python or javascipt before, these will be unfamiliar to you. Each variable in C++ must be annotated with a datatype. Datatypes include:</p>
+<pre><code class="language-cpp">char character = 'b';
+std::string word = &quot;Hello!&quot;;
+int number = 42;
+float decimal = 4.2;
+bool condition = false; // Can also be true
+</code></pre>
+<h2 id="strong-typing"><a class="header" href="#strong-typing">Strong Typing</a></h2>
+<p>C++ is a strongly typed language. This means that you cannot do operations on variables that do not have a matching type. This means that you cannot add a string to a number. You also cannot assign a value to a variable that doesn't match it's datatype.</p>
+<pre><code class="language-cpp">char character = &quot;abcdefg&quot;; // This will not work
+int number = 4.2; // This will not work
+int num = 42; // This will work
+std::string word =  &quot;word&quot; + num; // This will not work
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="functions"><a class="header" href="#functions">Functions</a></h1>
+<p>Functions are a powerful tool to help your reduce code duplication.  They can take input and send output, and run whatever code is inside them whenever they are called. Functions in C++ always have a return type. If a function doen't return anything it has the type void. If a function returns a value, that value can be assigned to a variable.</p>
+<pre><code class="language-cpp">// This function returns an int
+int add( int x, int y) { // Requires two variables as input, of type integer
+    return x + y; // Returs the two inputs added together.
+}
+
+int main() { // The main function is where the program's execution starts.
+    int sum = add(3,4); // Sum is equal to 7
+    return 0; // The main function must return 0
+}
+</code></pre>
+<p>Functions can also help your reduce code duplication.</p>
+<pre><code class="language-cpp">printf(&quot;-------\n&quot;);
+printf(&quot;hello&quot;);
+printf(&quot;-------\n&quot;);
+printf(&quot;\n&quot;);
+
+printf(&quot;-------\n&quot;);
+printf(&quot;world!&quot;);
+printf(&quot;-------\n&quot;);
+printf(&quot;\n&quot;);
+// This could be abreviated to
+void fancy_print(std::string input) {
+    printf(&quot;-------\n&quot;);
+    printf(&quot;%s&quot;,input);
+    printf(&quot;-------\n&quot;);
+    printf(&quot;\n&quot;);
+}
+fancy_print(&quot;hello&quot;);
+fancy_print(&quot;world!&quot;);
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="scope"><a class="header" href="#scope">Scope</a></h1>
+<p>Variables are only valid if they are in scope. Often, scope is denoted by curly brackets. You can think of scope as layered. Things lower scope have access to things higher in scope than them, but the higher scope cannot access the lower scope.</p>
+<h2 id="functions-1"><a class="header" href="#functions-1">Functions</a></h2>
+<p>The most common example of scope is functions. Variables defined inside functions are not accessible by the outside scope.</p>
+<pre><code class="language-cpp">void black_box() {
+    int x = 1;
+};
+
+int main() {
+    int x = 42;
+    black_box();
+    printf(&quot;%i\n&quot;,x); // This will output 42, not 1
+}
+</code></pre>
+<blockquote>
+<p>Note: You can still get values out of a function by returning.</p>
+</blockquote>
+<h2 id="shadowing"><a class="header" href="#shadowing">Shadowing</a></h2>
+<p>you can create your own lower scope just by inserting curly braces into your code.</p>
+<pre><code class="language-cpp">int main() {
+    int x = 1;
+    {
+
+        printf(&quot;%i\n&quot;,x); // Will output 1.
+        int x = 42;
+        printf(&quot;%i\n&quot;,x); // Will output 42.
+    }
+    printf(&quot;%i\n&quot;,x); // Will output 1.
+}
+</code></pre>
+<h2 id="abuse-of-global-scope"><a class="header" href="#abuse-of-global-scope">Abuse of Global Scope</a></h2>
+<p>Global scope is very commonly abused. Just because functions can access variables in a higher scope then them, doesn't mean they should. </p>
+<pre><code class="language-cpp">int x = 4;
+void black_box() {
+    x = 2; // This is possible, but never do it
+}
+</code></pre>
+<p>The reason for this is this: as your programs grow, it'll become harder and harder to keep track of what modifies what. Functions should only modify things in their scope. The only acceptable use of reading values outside of scope are constants. Constants are garuanteed to never change, so there's nothing to keep track of.</p>
+<pre><code class="language-cpp">const float PI = 3.14; // Consts should be spelled with all caps
+float calculate_wheel_circumference(float radius) {
+    return 2 * radius * PI;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="header-files"><a class="header" href="#header-files">Header Files</a></h1>
+<p>Header files are C++ of program organization. These let you access functions, variables, classes, and objects across multiple files. A header file is any file with the .h or .hpp extension.</p>
+<h2 id="variables-in-headers"><a class="header" href="#variables-in-headers">Variables in Headers</a></h2>
+<p>As a general rule, the only variables that should be defined in headers are consts. This is because variables defined in headers are globally acessible, and therefore should not change.</p>
+<h2 id="forward-declarations"><a class="header" href="#forward-declarations">Forward Declarations</a></h2>
+<p>The primary purpose of a header file is to forward declare things. One of the more common examples is a function:</p>
+<pre><code class="language-cpp">int add(int x, inty);
+</code></pre>
+<p>Not that this function has no body. This is just a declaration, it doesn't do anything by itself. Definitions occur in body files.</p>
+<h2 id="including"><a class="header" href="#including">Including</a></h2>
+<p>To get access to this forward declaration you need to use a preprocessor directive (also called macros).</p>
+<p>If we named our header add.hpp, we can include it like this:</p>
+<pre><code class="language-cpp">#include &quot;add.hpp&quot; //No semicolon
+</code></pre>
+<p>This tells the compiler to copy and paste the contents of add.hpp into the current file at compile time. You can then define the function like this:</p>
+<pre><code class="language-cpp">#include &quot;add.hpp&quot; 
+
+int add(int x, int y) {
+    return x + y;
+  }
+</code></pre>
+<p>You can only define a function that has been forward declared once. It must match the name, return type, and inputs as the declaration, otherwise the compiler with think that it's a different function. You can then access this definition anywhere in the program by doing the same include.</p>
+<h2 id="header-guards"><a class="header" href="#header-guards">Header Guards</a></h2>
+<p>The include macro copies and pastes the contents of the header into body files at compile time which means that if we're not careful, we can end up with multiple declarations of the same function, which will cause a compiler error. To solve this problem we have header guards.</p>
+<pre><code class="language-cpp">#ifndef ADD_HPP // This name  must be unique, otherwise you will cause other headers to be ignored
+#define ADD_HPP
+
+int add(int x, int y);
+
+#endif
+</code></pre>
+<h2 id="pragma-once"><a class="header" href="#pragma-once">Pragma Once</a></h2>
+<p>Alternativly pragma once will do the same thing:</p>
+<pre><code class="language-cpp">#pragma once
+</code></pre>
+<p>This ensures that add will only be copied once, even if it is included multiple times.</p>
+<h2 id="more-info"><a class="header" href="#more-info">More Info</a></h2>
+<p><a href="https://www.learncpp.com/cpp-tutorial/header-files/">This</a> tutorial provides much more in depth information on header files.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="namespaces"><a class="header" href="#namespaces">Namespaces</a></h1>
+<p>These are a powerful tool for project organization. These allow you to put your code in an organizational box.</p>
+<pre><code class="language-cpp">namespace math {
+    int add(int x, int y) {
+        return x + y;
+      }
+  }
+
+  int sum = math::add(1,2);
+</code></pre>
+<p>This can prevent naming collisions. We can define an add function in the math name space, and in the normal namespace, and they will both be valid. Most libraries use at least one base namespace for this reason.</p>
+<p>Namespaces can be nested as much as you want. You have likely already seen the namespace for the standard library, std.</p>
+<pre><code class="language-cpp">std::string hello = &quot;hello world&quot;;
+</code></pre>
+<p>To save us some typing we can do:</p>
+<pre><code class="language-cpp">using namespace std;
+string hello = &quot;hello world&quot;;
+</code></pre>
+<p>You can only include one namespace at a time.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="conventions"><a class="header" href="#conventions">Conventions</a></h1>
+<p>Coding conventions are general guidelines for creating clean, readable, structured, and interpretable code. While you can make a program following no coding conventions that works well, following some form of conventions can make mistakes less likely and collaboration much, much easier.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="descriptive-names"><a class="header" href="#descriptive-names">Descriptive Names</a></h1>
+<p>Names communicate information. The more information you can communicate with your program, the better. This makes it clearer what the program is doing, not just to other people, but to you as well. Even if you think you will remember what a name means, you usually will not.</p>
+<p>In general, strive for descriptive variable and function names. Imagine that someone else is trying to read your code. Would they be more likely to understand a variable named <code>p</code>, or one named <code>motor_power</code>? </p>
+<h3 id="booleans"><a class="header" href="#booleans">Booleans</a></h3>
+<p>Boolean names should give a hint as to what their state means.</p>
+<pre><code class="language-cpp">// Is true reversed, or is false reversed?
+bool reversed;
+bool is_reversed; // Its clear that when this variable is true, something is reversed. But what?
+bool is_not_reversed; // Never ever do this
+</code></pre>
+<h3 id="magic-numbers"><a class="header" href="#magic-numbers">Magic Numbers</a></h3>
+<p>Never leave unlabeled numbers in your program.</p>
+<pre><code class="language-cpp">// What is 2.75?
+double dist_traveled = encoder.get_value() * (2 * M_PI * 2.75) / 360;
+
+// Better
+const float WHEEL_RADIUS = 2.75;
+double dist_traveled = encoder.get_value() * (2 * M_PI * WHEEL_RADIUS) / 360;
+
+// Even better
+const float WHEEL_RADIUS = 2.75;
+const float CIRCUMFERENCE =  2 * M_PI * WHEEL_RADIUS
+double dist_traveled = encoder.get_value() * CIRCUMFERENCE / 360
+
+// Best
+const float WHEEL_RADIUS = 2.75;
+const float CIRCUMFERENCE =  2 * M_PI * WHEEL_RADIUS;
+const float DIST_TRAVELED_PER_DEGREE =  CIRCUMFERENCE / 360;
+double dist_traveled = encoder.get_value() * DIST_TRAVELED_PER_DEGREE;
+// This is maybe a little too explicit, but at least its very clear what's happening
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="naming-conventions"><a class="header" href="#naming-conventions">Naming Conventions</a></h1>
+<p>The capitalization of names communicates information as well. Whether something starts with a capital letter or a lowercase letter, or whether it uses snake_case, or camelCase, informs the reader of it's purpose.</p>
+<h2 id="variable-names"><a class="header" href="#variable-names">Variable Names</a></h2>
+<p>Variables use lower case snake_case.</p>
+<pre><code class="language-cpp">int MotorPower // Incorrect
+int motorPower // Incorrect
+int motor_power // Correct
+</code></pre>
+<h3 id="constants"><a class="header" href="#constants">Constants</a></h3>
+<p>Constants use SCREAMING_SNAKE_CASE.
+The reason constants are different from normal variables is because these a guaranteed to never change.</p>
+<pre><code class="language-cpp">const float WHEEL_RADIUS = 2.75;
+</code></pre>
+<h2 id="enums-structs-and-classes"><a class="header" href="#enums-structs-and-classes">Enums, Structs and Classes</a></h2>
+<p>Enum, Struct and Class names all use UpperCamelCase.</p>
+<pre><code class="language-cpp">enum Colors{};
+struct Coordinates{}; 
+class MotorEncoder{};
+</code></pre>
+<h3 id="enum-members"><a class="header" href="#enum-members">Enum Members</a></h3>
+<p>Enum members also use UpperCamelCase;</p>
+<pre><code class="language-cpp">enum Colors {
+    Red,
+    Green,
+    Blue
+}
+</code></pre>
+<h3 id="struct-and-class-members"><a class="header" href="#struct-and-class-members">Struct and Class Members</a></h3>
+<p>These use snake_case.</p>
+<pre><code class="language-cpp">class MotorEncoder {
+    public:
+    float current_position;
+};
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="comments"><a class="header" href="#comments">Comments</a></h1>
+<p>This section is based off of <a href="https://stackoverflow.blog/2021/12/23/best-practices-for-writing-code-comments/">this</a>stackoverflow blog post.</p>
+<p>Comments are a very useful and overused tool. Remember that no comment is better than a bad comment. You are garaunteed that the computer is doing exactly what you are telling it to, but there is no such garauntee for the comments. The comments can lie, but your code cannot.</p>
+<h2 id="dont-write-redundant-comments"><a class="header" href="#dont-write-redundant-comments">Don't Write Redundant Comments</a></h2>
+<p>If what your code does is obvious, it doesn't need a comment.</p>
+<pre><code class="language-cpp">i = i + x; // Adds i to x
+</code></pre>
+<p>or even better</p>
+<pre><code class="language-cpp">// create a for loop // &lt;-- comment
+for // start for loop
+(   // round bracket
+    // newline
+int // type for declaration
+i    // name for declaration
+=   // assignment operator for declaration
+0   // start value for i
+</code></pre>
+<h2 id="comments-do-not-excuse-unclear-code"><a class="header" href="#comments-do-not-excuse-unclear-code">Comments do not Excuse Unclear Code</a></h2>
+<p>The most common culprit of unclear code is <a href="conventions/descriptive_variables.html">bad variable names</a></p>
+<pre><code class="language-java">private static Node getBestChildNode(Node node) {
+    Node n; // best child node candidate
+    for (Node node: node.getChildren()) {
+        // update n if the current state is better
+        if (n == null || utility(node) &gt; utility(n)) {
+            n = node;
+        }
+    }
+    return n;
+}
+
+// This doesn't need comments, because it explains itself
+private static Node getBestChildNode(Node node) {
+    Node bestNode;
+    for (Node currentNode: node.getChildren()) {
+        if (bestNode == null || utility(currentNode) &gt; utility(bestNode)) {
+            bestNode = currentNode;
+        }
+    }
+    return bestNode;
+}
+</code></pre>
+<p>Before resorting to writing comments, see if you can reword your code to make it more readable.</p>
+<h2 id="if-you-cant-write-a-clear-comment-there-may-be-a-problem-with-the-code"><a class="header" href="#if-you-cant-write-a-clear-comment-there-may-be-a-problem-with-the-code">If You Can't Write a Clear Comment, There May be a Problem with the Code</a></h2>
+<blockquote>
+<p><strong>Kerninghan's Law:</strong>
+Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.</p>
+</blockquote>
+<p>If your code cannot be described by a comment, you probably need to rewrite your code. If you are using obscure language features, or unclear, unintuitive syntax to make your program as short as possuble, consider rewriting your program.</p>
+<h2 id="why-not-how"><a class="header" href="#why-not-how">Why, not How</a></h2>
+<p>While it might be obvious to you the reason you do things, other people might not. A good time to write comments is when it explains why you wrote something the way you did.</p>
+<pre><code class="language-java">final Object value = (new JSONTokener(jsonString)).nextValue();
+// Note that JSONTokener.nextValue() may return
+// a value equals() to null.
+if (value == null || value.equals(null)) {
+    return null;
+}
+</code></pre>
+<p>In this case it may not be obvious why the code handles a null case.</p>
+<h2 id="links"><a class="header" href="#links">Links</a></h2>
+<p>If you used an outside source to figure out a peice of code, make sure to cite that source.</p>
+<pre><code class="language-cpp">// Algorithm taken from:
+// http://thepilons.ca/wp-content/uploads/2018/10/Tracking.pdf
+delta_x_global = (delta_y_local * cos(avg_theta_for_arc)) -
+                 (delta_x_local * sin(avg_theta_for_arc));
+
+delta_y_global = (delta_y_local * sin(avg_theta_for_arc)) -
+                 (delta_x_local * cos(avg_theta_for_arc));
+</code></pre>
+<h2 id="notes-to-self"><a class="header" href="#notes-to-self">Notes to Self</a></h2>
+<p>If something is unimplemented, or not working, mark that with a comment. Anotations like FIXME and TODO are the standard way to do this. Most syntax highlighters will highlight these to make them pop out to people reading.</p>
+<pre><code class="language-cpp">Coordinates get_position() {
+    // TODO: return the position of the robot in cartesian coordinates
+}
+
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="program-structure"><a class="header" href="#program-structure">Program Structure</a></h1>
+<p>Program organization is a critical part of programming, that is very subjective. This of course means that no one can agree on how it should be done. However, there are a few general guidelines that you should follow.</p>
+<h2 id="main-file"><a class="header" href="#main-file">Main File</a></h2>
+<p>PROS projects have no main file, however the concept still applies. The only function you should define in your main file is main. The main file is for executing code, not defining it. The same principle applies to your opcontrol and autonomous functions (as well as functions like disabled). These act as the main functions for VEX, and should be treated as such.</p>
+<h2 id="splitting-up-your-main-file"><a class="header" href="#splitting-up-your-main-file">Splitting Up Your Main File</a></h2>
+<p>In PROS, everything in the src folder gets compiled. This means that you can define opcontrol and autonomous in any file, so long as they're only defined once. This means that you can split your opcontrol code and autonomous code into their own files.</p>
+<h2 id="header-files-1"><a class="header" href="#header-files-1">Header Files</a></h2>
+<p>There is typically one header file for each body file that you define. You only need to create headers for files that contain things that you want to access in other parts of your program. For example if I have a body file called utils.cpp, I would also create a file called utils.hpp. The folder structure of your headers should mirror the structure of your body files. For example if I have a folder called helpers, and in that folder I have auton.cpp, opcontrol.cpp, and misc.cpp, I would also create a folder for my headers called helpers, and in that folder I would create auton.hpp, opcontrol.hpp, and misc.hpp.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="object-oriented-programming"><a class="header" href="#object-oriented-programming">Object Oriented Programming</a></h1>
+<p>Simply put, object oriented programming is a way of organizing your code. It allows you to assiciate functions and variables with groups called objects. </p>
+<p>Objects are defined from classes. A class is like a blueprint. Imagine we have a class called Car. Car has properties, which are: color, speed, wheel_size. It might also have methods, like drive() and brake(). If we define a new car based on the Car class, it will have those properties and methods.</p>
+<blockquote>
+<p>Note: Astute readers will notive that the capitalizations in the paragraph above are weird. This is because we always capitalize class names, but we never capitalize objects.</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="classes"><a class="header" href="#classes">Classes</a></h1>
+<p>You can define a class as follows:</p>
+<pre><code class="language-cpp">class Car {
+    public:
+    int speed;
+    Color color; // enum
+    int wheel_size;
+    void drive(); // you can define functions as a part of classes
+};
+
+// You can define a new object like this
+Car volvo;
+// Member variables are uninitialized by default
+volvo.speed = 3;
+volvo.color = Red;
+volvo.wheel_size = 2
+volvo.drive();
+</code></pre>
+<h2 id="class-members"><a class="header" href="#class-members">Class Members</a></h2>
+<p>Almost anything can be part of a class. Enums, functions, objects, and of course variables, can all be a part of a class.</p>
+<h2 id="public-vs-private"><a class="header" href="#public-vs-private">Public vs Private</a></h2>
+<p>In our class definition, all of our members are public. This means that they can be accessed outside of the class. This is why we can assign values to the variables after the object is defined. Good practice is to only give public access to things that really need it. A good rule to follow is to make everything private by default, and then make things public as needed.</p>
+<p>There are other member categories, like protected and friend, but those will not be covered here.</p>
+<pre><code class="language-cpp">class Car {
+    private:
+    int speed,
+};
+
+Car volvo;
+volvo.speed = 3; // This will not work
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="constructors"><a class="header" href="#constructors">Constructors</a></h1>
+<p>The way we had to assign values to members in the last chapter was pretty clunky. It required multiple lines, and all of the variables had to be public. However, there is a solution to this problem called constructors. Constructors are a special type of functions that return an instance of a class. They must have the same name as class.</p>
+<pre><code class="language-cpp">class Car {
+    public:
+    Car(int input) {
+        speed = input;
+    }
+    private:
+    int speed;
+};
+
+// Now we can use our constructor like this:
+Car volvo(3);
+</code></pre>
+<h2 id="initializer-lists"><a class="header" href="#initializer-lists">Initializer Lists</a></h2>
+<p>C++ provides even more shorthand for initializing variables. Initializer lists are a quick way to assign values to members of a class.</p>
+<pre><code class="language-cpp">class Car {
+    public:
+    Car();
+    private:
+    int speed;
+    int wheel_size;
+};
+
+Car::Car(int speed, int wheel_size):
+    speed(speed),
+    wheel_size(wheel_size),
+{
+    // More complicated stuff should go here
+}</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="pros"><a class="header" href="#pros">Pros</a></h1>
+<p>Pros is an alternative to the popular API vexcode. It is maintained by students at Purdue University. It is open source, and is more powerful than it's alternative, but is slightly harder to use.</p>
+<p>It has many existing supporting libraries, including:</p>
+<ul>
+<li>Sylib</li>
+<li>Ryanlib</li>
+<li>Okapilib</li>
+<li>ARMS</li>
+<li>LEGS</li>
+<li>EZ Template</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="getting-started"><a class="header" href="#getting-started">Getting Started</a></h1>
+<h2 id="installation"><a class="header" href="#installation">Installation</a></h2>
+<p>As always, the <a href="https://pros.cs.purdue.edu/v5/getting-started/installation.html">official documentation</a> is a pretty good place to look.</p>
+<h3 id="vscode"><a class="header" href="#vscode">VSCode</a></h3>
+<p>This is the recommended way to install pros. Simply go to the extensions page, and click install. This is platform agnostic.</p>
+<h3 id="linux"><a class="header" href="#linux">Linux</a></h3>
+<p>You can also install pros as a cli via the official python package.</p>
+<pre><code class="language-sh"># You will also need to install the arm toolchain with your package manager of choice
+pip install pros-cli
+</code></pre>
+<h3 id="macos"><a class="header" href="#macos">MacOS</a></h3>
+<p>You can also install pros as a cli via homebrew.</p>
+<pre><code class="language-sh">brew tap osx-cross/arm &amp;&amp; brew install arm-gcc-bin # Installs the toolchain
+brew install pros-cli
+</code></pre>
+<p>While the VSCode extension provides a gui to manage your project, we will only provide instructions for the CLI. This is because the gui uses the cli under the hood, and its better to know what it's actually doing. In addition, the cli gives more descriptive error messages when building, making it easier to debug. </p>
+<p>If you've installed pros as a package, simply open any terminal to get to the cli. If you're using the VSCode extension, click the &quot;Integrated Terminal&quot;
+You can verify that pros is working using:</p>
+<pre><code class="language-sh">pros --version
+</code></pre>
+<blockquote>
+<p>Note: If you're using the VSCode extension, the pros cli will only work in the integrated terminal.</p>
+</blockquote>
+<h2 id="your-first-project"><a class="header" href="#your-first-project">Your First Project</a></h2>
+<p>You can create a new pros project using:</p>
+<pre><code class="language-sh">pros conductor new-project /path/to/your/project
+# If your terminal is currently in the folder you want to create the project in, you can use:
+pros conductor new-project $(pwd)
+</code></pre>
+<blockquote>
+<p>Tip: pros subcommands can be abreviated to their shortest unique letters, starting from the front. This command can be written as:</p>
+</blockquote>
+<pre><code class="language-sh">pros c n $(pwd)
+</code></pre>
+<p>if you get an error that looks like this:</p>
+<pre><code>Creating cold package with libc,libm,libpros,okapilib [ERRORS]
+sh: line 1: arm-none-eabi-g++: command not found
+make: *** [common.mk:229: bin/cold.package.elf] Error 127
+ERROR - pros.cli.build:make - Failed to make project: Exit Code 2
+Error: Failed to build
+Sentry is attempting to send 1 pending error messages
+Waiting up to 2 seconds
+Press Ctrl-C to quit
+</code></pre>
+<p>its because you didn't install the toolchain.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="project-structure"><a class="header" href="#project-structure">Project Structure</a></h1>
+<p>The default pros project is structured as follows</p>
+<pre><code>project
+│   project.pros        (used by PROS CLI to know kernel version and other metadata)
+│   Makefile            (instructs make how to compile your project)
+│   common.mk           (helper file for Makefile)
+│
+└───src                 (source files should go here)
+│   └───main.cpp        (source for competition task functions, like operator control and autonomous)
+│
+└───include             (Header files should go in here)
+│   └───api.h           (Lets source files know PROS API functions)
+│   └───main.h          (Includes api.h and anything else you want to include project-wide)
+│   └───pros            (Contains all of the specific header files for the PROS API functions)
+│   └───okapi           (Contains all of the header files for OkapiLib)
+│   └───display         (Contains all of the header files for LVGL, the graphics library for the V5 screen)
+│
+└───firmware
+│   └───libpros.a       (Pre-compiled PROS library)
+│   └───okapilib.a      (Pre-compiled OkapiLib library)
+│   └───v5.ld           (Instructs the linker how to construct binaries for the V5)
+</code></pre>
+<p>Most of these files are automatically generated, and should not be touched. Src contains all of your body files, and include contains all of your header files. Due to how pros is built, all files in these directories are compiled when you run pros make. The only files that you should edit are main.h and main.cpp</p>
+<p>main.cpp contains these functions:</p>
+<pre><code class="language-cpp">// main.cpp
+void initialize() {};
+void disabled() {};
+void competition_initialize() {};
+void autonomous() {};
+void opcontrol() {};
+</code></pre>
+<p>Most of these functions are self explanatory, and have comments describing their purpose.</p>
+<p>Opcontrol contains an infinite loop, because it is meant to run until the program is killed.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="buttons"><a class="header" href="#buttons">Buttons</a></h1>
+<p>There are many use cases for buttons. Maybe you want to trigger an action on a subsystem, toggle a piston, or select an autonomous. Regardless, reading input from the buttons is simple.</p>
+<pre><code class="language-cpp">using namespace pros;
+void opcontrol(){
+  Controller controller (CONTROLLER_MASTER);
+  Motor arm(1);
+  while (true) {
+    if (controller.get_digital(DIGITAL_R1)) {
+      arm.move_velocity(100); // This is 100 because it's a 100rpm motor
+    }
+    else if (controller.get_digital(DIGITAL_R2)) {
+      arm.move_velocity(-100); 
+    }
+    else {
+      arm.move_velocity(0); // Default condition
+    }
+    delay(2);
+  }
+}
+</code></pre>
+<p>However, this will only work for held actions. This code will continually set the arm's velocity to 100. If you only want an action to trigger once, you have to use the get_digital_new_press method of the controller.</p>
+<pre><code class="language-cpp">void opcontrol(){
+  Controller controller (CONTROLLER_MASTER);
+  Motor arm(1);
+  bool is_arm_spinning = false;
+  while (true) {
+    if (controller.get_digital_new_press(DIGITAL_R1)) {
+      is_arm_spinning = !is_arm_spinning; // If its true, set to false, and vice versa
+    }
+    if (is_arm_spinning) {
+        arm.move_velocity(100) ; 
+      } else {
+          arm.move_velocity(0);
+        }
+        delay(2);
+    }
+  }
+}
+</code></pre>
+<p>You need this alternative method because of how fast the loop runs. You cannot guarantee how many times the loop will run while the drive presses the button. This method only registers true once per button press, regardless of how long the drive presses the button.</p>
+<div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="tank-drive"><a class="header" href="#tank-drive">Tank Drive</a></h1>
+<p>The first step of creating the basic code to control your robot is to define your devices.</p>
+<pre><code class="language-cpp">using namespace pros;
+void opcontrol() {
+    Controllor controller(E_CONTROLLER_MASTER);
+    Motor motor_left(1);
+    Motor motor_left(2, true); //This motor is reversed
+  }
+</code></pre>
+<p>This will define a controller, and two motors, one on port 1, and the other on port 2. The full options for defining motors can be found <a href="https://pros.cs.purdue.edu/v5/api/cpp/motors.html#constructor-s">here</a>.</p>
+<blockquote>
+<p>Note: Astute readers will notice that due to the rules of scope, these devices will not be accessible outside of the opcontrol function. If you want these to exist in other parts of your program, either for auton or for configuration during initialize, you will need to define them outside of a function. Best practice is to put them in a header, and include them where you need them.</p>
+</blockquote>
+<p>Now we need to read from the controller, in order to figure out how fast the driver wants the robot to move.</p>
+<pre><code class="language-cpp">using namespace pros;
+int left_y = controller.get_analog(ANALOG_LEFT_Y);
+int right_y = controller.get_analog(ANALOG_RIGHT_Y);
+</code></pre>
+<p>This will return an integer from -127 to 127, based on the joysticks position.</p>
+<p>We don't want to just get this value once, we want it to update as the drive moves the joysticks. For this, we'll use an infinite loop.</p>
+<pre><code class="language-cpp">using namespace pros;
+void opcontrol() {
+    Controllor controller(E_CONTROLLER_MASTER);
+    Motor motor_left(1);
+    Motor motor_left(2, true);
+    int left_y;
+    int right_y;
+    while (true) {
+      left_y = controller.get_analog(ANALOG_LEFT_Y);
+      right_y = controller.get_analog(ANALOG_RIGHT_Y);
+      pros::delay(2); // allows other threads to run
+      }
+  }
+</code></pre>
+<h2 id="tank-drive-1"><a class="header" href="#tank-drive-1">Tank Drive</a></h2>
+<p>But this code doesn't actually do anything yet. We still need to move the motors. The motors have a move method, that takes an integer from -127 to 127. Fortunately, thats exactly what the get_analog method returns.</p>
+<pre><code class="language-cpp">using namespace pros;
+void opcontrol() {
+    Controllor controller(CONTROLLER_MASTER);
+    Motor motor_left(1);
+    Motor motor_left(2, true);
+    int left_y;
+    int right_y;
+    while (true) {
+      left_y = controller.get_analog(ANALOG_LEFT_Y);
+      right_y = controller.get_analog(ANALOG_RIGHT_Y);
+      motor_left.move(left_y);
+      motor_right.move(left_x);
+
+      pros::delay(2);
+      }
+  }
+</code></pre>
+<p>This code will result in the drive controlling one half on the robot with one joystick, and the other half with the other.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="arcade-drive"><a class="header" href="#arcade-drive">Arcade Drive</a></h1>
+<p>The first step of creating the basic code to control your robot is to define your devices.</p>
+<pre><code class="language-cpp">using namespace pros;
+void opcontrol() {
+    Controllor controller(E_CONTROLLER_MASTER);
+    Motor motor_left(1);
+    Motor motor_left(2, true); //This motor is reversed
+  }
+</code></pre>
+<p>This will define a controller, and two motors, one on port 1, and the other on port 2. The full options for defining motors can be found <a href="https://pros.cs.purdue.edu/v5/api/cpp/motors.html#constructor-s">here</a>.</p>
+<blockquote>
+<p>Note: Astute readers will notice that due to the rules of scope, these devices will not be accessible outside of the opcontrol function. If you want these to exist in other parts of your program, either for auton or for configuration during initialize, you will need to define them outside of a function. Best practice is to put them in a header, and include them where you need them.</p>
+</blockquote>
+<p>Now we need to read from the controller, in order to figure out how fast the driver wants the robot to move.</p>
+<pre><code class="language-cpp">using namespace pros;
+int left_y = controller.get_analog(ANALOG_LEFT_Y);
+int right_y = controller.get_analog(ANALOG_RIGHT_Y);
+</code></pre>
+<p>This will return an integer from -127 to 127, based on the joysticks position.</p>
+<p>We don't want to just get this value once, we want it to update as the drive moves the joysticks. For this, we'll use an infinite loop.</p>
+<pre><code class="language-cpp">using namespace pros;
+void opcontrol() {
+    Controllor controller(E_CONTROLLER_MASTER);
+    Motor motor_left(1);
+    Motor motor_left(2, true);
+    int left_y;
+    int right_y;
+    while (true) {
+      left_y = controller.get_analog(ANALOG_LEFT_Y);
+      right_y = controller.get_analog(ANALOG_RIGHT_Y);
+      pros::delay(2); // allows other threads to run
+      }
+  }
+</code></pre>
+<h2 id="arcade-drive-1"><a class="header" href="#arcade-drive-1">Arcade Drive</a></h2>
+<p>This is an alternate control scheme where one joystick controls forwards and backwards, and the other controls turning. Most people use tank drive, but the option exists.</p>
+<pre><code class="language-cpp">void opcontrol() {
+  pros::Motor motor_left (1);
+  pros::Motor motor_right (2, true);
+  pros::Controller controller (CONTROLLER_MASTER);
+
+  while (true) {
+    int power = master.get_analog(ANALOG_LEFT_Y);
+    int turn = master.get_analog(ANALOG_RIGHT_X);
+    int left = power + turn;
+    int right = power - turn;
+    motor_left.move(left);
+    motor_right.move(right);
+
+    pros::delay(2);
+  }
+}
+
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="git"><a class="header" href="#git">Git</a></h1>
+<h2 id="what-is-git"><a class="header" href="#what-is-git">What is Git?</a></h2>
+<p>Git is a VCS or a version control system. It is used to save points in time on your code called commits. Together they make up the history of your project. </p>
+<h2 id="why-use-git"><a class="header" href="#why-use-git">Why use Git?</a></h2>
+<p>Git is a very powerful peice of software, with a lot of options. It is very manual, and doesn't do anything without the user specifying it. Ths makes it very difficult and unintuitive to use.</p>
+<p>Despite this, we recomend you use git for multiple reasons.</p>
+<h3 id="collaboration"><a class="header" href="#collaboration">Collaboration</a></h3>
+<p>Git makes it much easier to work together. You can combine it with github in order to make code easily accessible. It's manual nature makes it so that changes don't get made to the code on your computer by other people without your consent. It also provides tools like branches and merging to make sure that your changes don't conflict.</p>
+<h3 id="safety"><a class="header" href="#safety">Safety</a></h3>
+<p>Git allows you make changes without worrying about breaking your code. If you makes changes that you aren't happy with, you can simply revert to an older commit.</p>
+<h3 id="industry-standard"><a class="header" href="#industry-standard">Industry Standard</a></h3>
+<p>Git is used by everwhere where code is involved. This very guide is managed by git. You might as well learn it now.</p>
+<h2 id="official-documentation"><a class="header" href="#official-documentation">Official Documentation</a></h2>
+<p>If something isn't covered here, its likely in the <a href="https://git-scm.com/docs">official documentation</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><p>There are many ways to use git. There are may ways to use git, including:</p>
+<ul>
+<li>cli (command line interface)</li>
+<li>Integrated VSCode support</li>
+<li>Integrated CLion support</li>
+<li>Github desktop</li>
+<li>Lazygit</li>
+</ul>
+<p>This guide will only cover the cli, because the other tools are based on it. If you know how to use the cli, you will know how to use the others.</p>
+<h1 id="installation-1"><a class="header" href="#installation-1">Installation</a></h1>
+<p>It's likely that the <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">official documentation</a> is more helpful.</p>
+<h2 id="windows"><a class="header" href="#windows">Windows</a></h2>
+<p>Download the official binary from <a href="https://git-scm.com/download/win">here</a>.</p>
+<p>Or run:</p>
+<pre><code class="language-sh">choco install git #requires the chocolatey package manager 
+</code></pre>
+<h2 id="linux-1"><a class="header" href="#linux-1">Linux</a></h2>
+<pre><code class="language-sh"># Fedora
+sudo dnf install git-all
+
+# Debian/Ubuntu
+sudo apt install git-all
+
+# Arch
+sudo pacman -S git
+</code></pre>
+<p>If you use a different package manager, we trust you know what to do.</p>
+<h2 id="macos-1"><a class="header" href="#macos-1">MacOS</a></h2>
+<pre><code class="language-sh">git --version # will prompt you to install
+# or
+brew install git # requires homebrew package manager
+</code></pre>
+<p>Verify that git is installed by running</p>
+<pre><code class="language-sh">git --version
+</code></pre>
+<p>in your terminal of choice.</p>
+<h2 id="your-first-project-1"><a class="header" href="#your-first-project-1">Your First Project</a></h2>
+<p>Make your first git project using:</p>
+<pre><code class="language-sh">git init # Make sure you run this in the correct folder
+
+git status # Verify that the command worked
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="adding-files"><a class="header" href="#adding-files">Adding Files</a></h1>
+<p>Git will only track files that you explicitly tell it to.</p>
+<pre><code class="language-sh"># Adds specific file
+git add .
+# or you can add specific files
+git add myfile.txt
+
+git status # Will tell you what files are staged and unstaged.
+</code></pre>
+<h1 id="removing-files"><a class="header" href="#removing-files">Removing Files</a></h1>
+<pre><code class="language-sh"># This will not delete the file, it will only unstage it.
+git rm --cached myfile.txt 
+# This will delete the file.
+git rm -f myfile.txt 
+</code></pre>
+<h1 id="your-first-commit"><a class="header" href="#your-first-commit">Your First Commit</a></h1>
+<p>You can add all of your added files to a commit with the command:</p>
+<pre><code class="language-sh">git commit -m &quot;My first commit&quot;
+</code></pre>
+<p>This will create a commit with the message &quot;My first commit&quot;.</p>
+<blockquote>
+<p>Note: Your commit names are important. They should describe the changes you made. If you notice that you can't summarize your changes in one scentence because you made too many changes, consider making multiple commits. </p>
+</blockquote>
+<h1 id="gitignore"><a class="header" href="#gitignore">.gitignore</a></h1>
+<p>Some files you don't want to be tracked by git. Files containing secrets, binaries, and compressed files are all in this category. As a general rule of thumb, files that don't have contents that can be read by humans shouldn't be tracked by git. If you read the file, and all you see is unreadable gibberish (code you don't understand doesn't count), don't stage it.</p>
+<p>You can make file unstageable by adding them to your .gitignore. Create a file called .gitignore, and add the files and folders you want to ignore.</p>
+<pre><code class="language-sh">#.gitignore
+bin/ # Ignores a folder
+myfile.txt # Ignores a file
+*.o # Ignores all files that end in .o
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="pushing-and-pulling"><a class="header" href="#pushing-and-pulling">Pushing and Pulling</a></h1>
+<p>This is the main way you interact with other branches.</p>
+<p>This includes remote branches (but we'll talk about those later)</p>
+<pre><code class="language-sh">git checkout master # We are now on the master branch
+git pull my_branch # Get all of the changes from my_branch, and add them to master
+
+git checkout my_branch
+git push master # Adds all of the commits that master doesn't have to master
+</code></pre>
+<blockquote>
+<p>Note: You cannot pull with uncommited changes, and push will ignore changes you have uncommited.</p>
+</blockquote>
+<h2 id="diverging-branches"><a class="header" href="#diverging-branches">Diverging Branches</a></h2>
+<p>When running these commands, it is highly likely that you will eventually see a message that looks like this:</p>
+<pre><code>hint: Pulling without specifying how to reconcile divergent branches is
+hint: discouraged. You can squelch this message by running one of the following
+hint: commands sometime before your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge (the default strategy)
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace &quot;git config&quot; with &quot;git config --global&quot; to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+</code></pre>
+<p>It is likely that your branches don't perfectly line up, usually because master recieved a commit since the branch was made. Or, even more likely, someone else pushed to master while you were working. In this scenario you have two options, merging or rebasing.</p>
+<pre><code>o---o---o---A---B---C master
+	     \
+		  X---Y---Z  my_branch
+</code></pre>
+<h3 id="rebasing"><a class="header" href="#rebasing">Rebasing</a></h3>
+<p>In this option, commits are added back in time. This is perfect if the difference between the branches is very small. If there are conflicts, you will have to fix them for every single differing commit. It means that history will be preserved, and no commits will be lost.</p>
+<p>You can initiate a rebase by using:</p>
+<pre><code class="language-sh">git pull --rebase
+git push --rebase
+</code></pre>
+<p>Rebasing will result in:</p>
+<pre><code>o---o---o---X---Y---Z---A---B---C master
+	     \          /
+          X---Y---Z  my_branch
+</code></pre>
+<h3 id="merging"><a class="header" href="#merging">Merging</a></h3>
+<p>In this option, differing commits are squashed (this is the actual term for this) into a single commit. None of your changes will be lost, but the history won't be as clear. This is a good option if the amount of commits that you are pushing or pulling is very large, because you will only have to fix conflicts once.</p>
+<p>You can merge using:</p>
+<pre><code class="language-sh">git pull --merge
+git push --merge
+</code></pre>
+<p>Merging will result in:</p>
+<pre><code>o---o---o---A---B---C---D master
+	     \             /
+		  X---Y---Z -- my_branch
+</code></pre>
+<h2 id="merge-conflicts"><a class="header" href="#merge-conflicts">Merge conflicts</a></h2>
+<p>These are the bane of any developer's existence. Usually merges/rebases are resolved automatically. However, sometimes you will recieve a merge conflict. This occurs when two commits that are being merged/rebased make changes to the same location on a file. This will require you to manually fix the conflicts. Running git status will show you which files need to be changed. You can accept the changes from the file on your branch using:</p>
+<pre><code class="language-sh">git checkout --ours &lt;file name&gt;
+# Or accept the remote changes
+git checkout --theirs &lt;file name&gt;
+</code></pre>
+<p>You can also accept every changes from the local branch using:</p>
+<pre><code class="language-sh">git merge --strategy-option ours
+# Or accept the remote changes
+git merge --strategy-option theirs
+</code></pre>
+<p>In case you want to fix the conflicts manually (you might want a combination of both changes), git status will tell you which files you need to change. When you edit those files you will find something like this:</p>
+<pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+Changes on the current branch
+======= 
+conflicting changes
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; conflicting_branch
+</code></pre>
+<p>Make the changes you want and delete the symbols, then add the changes.
+If you are rebasing, run:</p>
+<pre><code class="language-sh">git rebase --continue
+</code></pre>
+<p>Or if you are merging, simply commit.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="remote-branches"><a class="header" href="#remote-branches">Remote Branches</a></h1>
+<p>One of the most useful features of git is the ability to have remote branches. This is usually a git repository hosted on github. To link your local repository to your remote one, you need it's url. Github provides HTTPS and SSH as ways to do this. We recomend SSH, as the authentication is easier to set up. We won't cover how to do that here, but here is <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh">github's documentation</a> on how to set up authentication via SSH keys. Alternativly, repositories cloned through VSCode should have this automatically set up for you.</p>
+<p>Once you have the url you can add the remote repo using:</p>
+<pre><code class="language-sh">git remote add origin git@github.com:User/Repository.git # SSH
+</code></pre>
+<blockquote>
+<p>Note: This creates a remote repo called origin. Origin is the standard name for remote repos. While it is possible to have multiple remotes, it is highly unlikely.</p>
+</blockquote>
+<p>You can push and pull to remote branches like you would any other branch. </p>
+<pre><code class="language-sh">git pull origin master # Pulls from a branch on origin called master
+git push origin master 
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="resources"><a class="header" href="#resources">Resources</a></h1>
+<h2 id="misc"><a class="header" href="#misc">Misc</a></h2>
+<p><a href="https://git-scm.com/doc">Git Documentation</a></p>
+<p><a href="https://pros.cs.purdue.edu/v5/index.html">Pros Documentatin</a></p>
+<p><a href="https://wiki.purduesigbots.com/">Sigbots Wiki</a></p>
+<h2 id="code-quality"><a class="header" href="#code-quality">Code Quality</a></h2>
+<p><a href="https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-naming">Core C++ Naming Conventions</a></p>
+<p><a href="https://google.github.io/styleguide/cppguide.html#Variable_Names">Google naming conventions</a></p>
+<p><a href="https://stackoverflow.blog/2021/12/23/best-practices-for-writing-code-comments/">Commenting Guide</a></p>
+<h2 id="control-theory-resources"><a class="header" href="#control-theory-resources">Control Theory Resources</a></h2>
+<p><a href="https://georgegillard.com/resources/documents">Intro to PID</a></p>
+<p><a href="http://thepilons.ca/wp-content/uploads/2018/10/Tracking.pdf">Odometry</a></p>
+<p><a href="https://www.chiefdelphi.com/t/paper-implementation-of-the-adaptive-pure-pursuit-controller/166552">Adaptive Pure Pursuit</a></p>
+<h2 id="libraries-for-pros"><a class="header" href="#libraries-for-pros">Libraries for PROS</a></h2>
+<p><a href="https://okapilib.github.io/OkapiLib/index.html">Okapilib</a></p>
+<p><a href="https://github.com/purduesigbots/LEGS">ARMS</a></p>
+<p><a href="https://github.com/Ryan4253/lib4253">Lib4253</a></p>
+<p><a href="https://github.com/sy1vi3/sylib">Sylib</a></p>
+<p><a href="https://github.com/EZ-Robotics/EZ-Template">EZ Template</a></p>
+<p><a href="https://github.com/LemLib/LemLib">LemLib</a></p>
+<h2 id="high-quality-robot-code"><a class="header" href="#high-quality-robot-code">High Quality Robot Code</a></h2>
+<p><a href="https://github.com/theol0403/lib7842">lib7842</a></p>
+<p><a href="https://github.com/Ryan4253/4253B-Tipping-Point-Worlds">4253B-Tipping-Point-Worlds</a></p>
+<p><a href="https://github.com/nickmertin/5225A-2017-2018">nickmertin/5225A-2017-2018</a></p>
+<p><a href="https://github.com/vexcode-2019/Team_7K_robotics">Team_7K_robotics</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="git-terms"><a class="header" href="#git-terms">Git Terms</a></h3>
+<p>HEAD</p>
+<p>origin</p>
+<h3 id="programming-terms"><a class="header" href="#programming-terms">Programming Terms</a></h3>
+<p>PROS</p>
+<p>API</p>
+<p>GCC</p>
+<p>Make</p>
+<h3 id="misc-terms"><a class="header" href="#misc-terms">Misc Terms</a></h3>
+<p>cli</p>
+<p>gui</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+    </body>
+</html>

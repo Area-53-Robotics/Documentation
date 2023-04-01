@@ -1,0 +1,30 @@
+.alien {
+  --bg: #008000;
+  --fg: #cdd6f4;
+  --sidebar-bg: #181825;
+  --sidebar-fg: #cdd6f4;
+  --sidebar-non-existant: #6c7086;
+  --sidebar-active: #f5e0dc;
+  --sidebar-spacer: #6c7086;
+  --scrollbar: #6c7086;
+  --icons: #6c7086;
+  --icons-hover: #7f849c;
+  --links: #008000 ;
+  --inline-code-color: #fab387;
+  --theme-popup-bg: #181825;
+  --theme-popup-border: #6c7086;
+  --theme-hover: #6c7086;
+  --quote-bg: #181825;
+  --quote-border: #11111b;
+  --table-border-color: #11111b;
+  --table-header-bg: #181825;
+  --table-alternate-bg: #11111b;
+  --searchbar-border-color: #11111b;
+  --searchbar-bg: #181825;
+  --searchbar-fg: #cdd6f4;
+  --searchbar-shadow-color: #11111b;
+  --searchresults-header-fg: #cdd6f4;
+  --searchresults-border-color: #11111b;
+  --searchresults-li-bg: #1e1e2e;
+  --search-mark-bg: #fab387;
+}

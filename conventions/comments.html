@@ -1,0 +1,258 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Comments - Area 53 Robotics</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href=".././theme/catppuccin.css">
+        <link rel="stylesheet" href=".././theme/catppuccin-highlight.css">
+        <link rel="stylesheet" href=".././theme/alien.css">
+        <link rel="stylesheet" href=".././theme/alien-highlight.css">
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../introduction/introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../introduction/programming-mindset.html"><strong aria-hidden="true">1.1.</strong> Programming Mindset</a></li></ol></li><li class="chapter-item expanded "><a href="../basics/basics.html"><strong aria-hidden="true">2.</strong> Basics of C++</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../basics/variables.html"><strong aria-hidden="true">2.1.</strong> Variables</a></li><li class="chapter-item expanded "><a href="../basics/functions.html"><strong aria-hidden="true">2.2.</strong> Functions</a></li><li class="chapter-item expanded "><a href="../basics/scope.html"><strong aria-hidden="true">2.3.</strong> Scope</a></li><li class="chapter-item expanded "><a href="../basics/headers.html"><strong aria-hidden="true">2.4.</strong> Headers</a></li><li class="chapter-item expanded "><a href="../basics/namespaces.html"><strong aria-hidden="true">2.5.</strong> Namespaces</a></li></ol></li><li class="chapter-item expanded "><a href="../conventions/conventions.html"><strong aria-hidden="true">3.</strong> Conventions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../conventions/descriptive_variables.html"><strong aria-hidden="true">3.1.</strong> Descriptive Names</a></li><li class="chapter-item expanded "><a href="../conventions/naming_conventions.html"><strong aria-hidden="true">3.2.</strong> Naming Conventions</a></li><li class="chapter-item expanded "><a href="../conventions/comments.html" class="active"><strong aria-hidden="true">3.3.</strong> Comments</a></li><li class="chapter-item expanded "><a href="../conventions/program_organization.html"><strong aria-hidden="true">3.4.</strong> Program Structure</a></li></ol></li><li class="chapter-item expanded "><a href="../oop/oop.html"><strong aria-hidden="true">4.</strong> Object Oriented Programming</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../oop/classes.html"><strong aria-hidden="true">4.1.</strong> Classes</a></li><li class="chapter-item expanded "><a href="../oop/constructors.html"><strong aria-hidden="true">4.2.</strong> Constructors</a></li></ol></li><li class="chapter-item expanded "><a href="../pros/pros.html"><strong aria-hidden="true">5.</strong> Pros</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../pros/getting-started.html"><strong aria-hidden="true">5.1.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="../pros/default-project-structure.html"><strong aria-hidden="true">5.2.</strong> Default Project Structure</a></li><li class="chapter-item expanded "><a href="../pros/buttons.html"><strong aria-hidden="true">5.3.</strong> Buttons</a></li></ol></li><li class="chapter-item expanded "><a href="../examples/examples.html"><strong aria-hidden="true">6.</strong> Examples</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../examples/tank-drive.html"><strong aria-hidden="true">6.1.</strong> Tank Drive</a></li><li class="chapter-item expanded "><a href="../examples/arcade-drive.html"><strong aria-hidden="true">6.2.</strong> Arcade Drive</a></li></ol></li><li class="chapter-item expanded "><a href="../git/git.html"><strong aria-hidden="true">7.</strong> Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../git/getting-started.html"><strong aria-hidden="true">7.1.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="../git/commits-and-staging.html"><strong aria-hidden="true">7.2.</strong> Commits and Staging</a></li><li class="chapter-item expanded "><a href="../git/pushing-and-pulling.html"><strong aria-hidden="true">7.3.</strong> Pushing and Pulling</a></li><li class="chapter-item expanded "><a href="../git/remote-branches.html"><strong aria-hidden="true">7.4.</strong> Remote Branches</a></li></ol></li><li class="chapter-item expanded "><a href="../resources.html"><strong aria-hidden="true">8.</strong> Resources</a></li><li class="chapter-item expanded "><a href="../glossary.html"><strong aria-hidden="true">9.</strong> Glossary</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="latte">Latte</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="frappe">Frappé</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="macchiato">Macchiato</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mocha">Mocha</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="alien">Alien</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Area 53 Robotics</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="comments"><a class="header" href="#comments">Comments</a></h1>
+<p>This section is based off of <a href="https://stackoverflow.blog/2021/12/23/best-practices-for-writing-code-comments/">this</a>stackoverflow blog post.</p>
+<p>Comments are a very useful and overused tool. Remember that no comment is better than a bad comment. You are garaunteed that the computer is doing exactly what you are telling it to, but there is no such garauntee for the comments. The comments can lie, but your code cannot.</p>
+<h2 id="dont-write-redundant-comments"><a class="header" href="#dont-write-redundant-comments">Don't Write Redundant Comments</a></h2>
+<p>If what your code does is obvious, it doesn't need a comment.</p>
+<pre><code class="language-cpp">i = i + x; // Adds i to x
+</code></pre>
+<p>or even better</p>
+<pre><code class="language-cpp">// create a for loop // &lt;-- comment
+for // start for loop
+(   // round bracket
+    // newline
+int // type for declaration
+i    // name for declaration
+=   // assignment operator for declaration
+0   // start value for i
+</code></pre>
+<h2 id="comments-do-not-excuse-unclear-code"><a class="header" href="#comments-do-not-excuse-unclear-code">Comments do not Excuse Unclear Code</a></h2>
+<p>The most common culprit of unclear code is <a href="descriptive_variables.html">bad variable names</a></p>
+<pre><code class="language-java">private static Node getBestChildNode(Node node) {
+    Node n; // best child node candidate
+    for (Node node: node.getChildren()) {
+        // update n if the current state is better
+        if (n == null || utility(node) &gt; utility(n)) {
+            n = node;
+        }
+    }
+    return n;
+}
+
+// This doesn't need comments, because it explains itself
+private static Node getBestChildNode(Node node) {
+    Node bestNode;
+    for (Node currentNode: node.getChildren()) {
+        if (bestNode == null || utility(currentNode) &gt; utility(bestNode)) {
+            bestNode = currentNode;
+        }
+    }
+    return bestNode;
+}
+</code></pre>
+<p>Before resorting to writing comments, see if you can reword your code to make it more readable.</p>
+<h2 id="if-you-cant-write-a-clear-comment-there-may-be-a-problem-with-the-code"><a class="header" href="#if-you-cant-write-a-clear-comment-there-may-be-a-problem-with-the-code">If You Can't Write a Clear Comment, There May be a Problem with the Code</a></h2>
+<blockquote>
+<p><strong>Kerninghan's Law:</strong>
+Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.</p>
+</blockquote>
+<p>If your code cannot be described by a comment, you probably need to rewrite your code. If you are using obscure language features, or unclear, unintuitive syntax to make your program as short as possuble, consider rewriting your program.</p>
+<h2 id="why-not-how"><a class="header" href="#why-not-how">Why, not How</a></h2>
+<p>While it might be obvious to you the reason you do things, other people might not. A good time to write comments is when it explains why you wrote something the way you did.</p>
+<pre><code class="language-java">final Object value = (new JSONTokener(jsonString)).nextValue();
+// Note that JSONTokener.nextValue() may return
+// a value equals() to null.
+if (value == null || value.equals(null)) {
+    return null;
+}
+</code></pre>
+<p>In this case it may not be obvious why the code handles a null case.</p>
+<h2 id="links"><a class="header" href="#links">Links</a></h2>
+<p>If you used an outside source to figure out a peice of code, make sure to cite that source.</p>
+<pre><code class="language-cpp">// Algorithm taken from:
+// http://thepilons.ca/wp-content/uploads/2018/10/Tracking.pdf
+delta_x_global = (delta_y_local * cos(avg_theta_for_arc)) -
+                 (delta_x_local * sin(avg_theta_for_arc));
+
+delta_y_global = (delta_y_local * sin(avg_theta_for_arc)) -
+                 (delta_x_local * cos(avg_theta_for_arc));
+</code></pre>
+<h2 id="notes-to-self"><a class="header" href="#notes-to-self">Notes to Self</a></h2>
+<p>If something is unimplemented, or not working, mark that with a comment. Anotations like FIXME and TODO are the standard way to do this. Most syntax highlighters will highlight these to make them pop out to people reading.</p>
+<pre><code class="language-cpp">Coordinates get_position() {
+    // TODO: return the position of the robot in cartesian coordinates
+}
+
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../conventions/naming_conventions.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../conventions/program_organization.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../conventions/naming_conventions.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../conventions/program_organization.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

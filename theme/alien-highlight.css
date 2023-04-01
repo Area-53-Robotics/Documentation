@@ -1,0 +1,89 @@
+.alien code,
+.alien .hljs {
+  background: #181825;
+}
+.alien code .hljs-attr,
+.alien code .hljs-string {
+  color: #a6e3a1;
+}
+.alien code .hljs-tag {
+  color: #f38ba8;
+}
+.alien code .hljs-name {
+  color: #f2cdcd;
+}
+.alien pre .hljs {
+  background: #181825 !important;
+}
+.alien pre .hljs-params {
+  color: #f38ba8 !important;
+}
+.alien pre .hljs-built_in,
+.alien pre .hljs-selector-tag,
+.alien pre .hljs-section,
+.alien pre .hljs-link {
+  color: #74c7ec !important;
+}
+.alien pre .hljs-keyword {
+  color: #cba6f7 !important;
+}
+.alien pre .hljs,
+.alien pre .hljs-subst {
+  color: #a6adc8 !important;
+}
+.alien pre .hljs-title {
+  color: #89b4fa !important;
+}
+.alien pre .hljs-attr,
+.alien pre .hljs-meta-keyword {
+  color: #a6e3a1 !important;
+}
+.alien pre .hljs-type {
+  color: #89b4fa !important;
+}
+.alien pre .hljs-string {
+  color: #a6e3a1 !important;
+}
+.alien pre .hljs-tag {
+  color: #f38ba8 !important;
+}
+.alien pre .hljs-meta,
+.alien pre .hljs-name,
+.alien pre .hljs-symbol,
+.alien pre .hljs-bullet,
+.alien pre .hljs-addition,
+.alien pre .hljs-variable,
+.alien pre .hljs-template-tag,
+.alien pre .hljs-template-variable {
+  color: #f2cdcd !important;
+}
+.alien pre .hljs-addition {
+  background-color: #181825 !important;
+  color: #a6e3a1 !important;
+}
+.alien pre .hljs-deletion {
+  background-color: #181825 !important;
+  color: #f38ba8 !important;
+}
+.alien pre .hljs-comment,
+.alien pre .hljs-quote {
+  color: #585b70 !important;
+}
+.alien pre .hljs-keyword,
+.alien pre .hljs-selector-tag,
+.alien pre .hljs-literal,
+.alien pre .hljs-title,
+.alien pre .hljs-section,
+.alien pre .hljs-doctag,
+.alien pre .hljs-type,
+.alien pre .hljs-name,
+.alien pre .hljs-strong {
+  font-weight: bold !important;
+}
+.alien pre .hljs-literal,
+.alien pre .hljs-number {
+  color: #fab387 !important;
+}
+.alien pre .hljs-emphasis {
+  font-style: italic !important;
+}
