@@ -15,6 +15,14 @@
 
 [Commenting Guide](https://stackoverflow.blog/2021/12/23/best-practices-for-writing-code-comments/)
 
+## Control Theory Resources
+
+[Intro to PID](https://georgegillard.com/resources/documents)
+
+[Odometry](http://thepilons.ca/wp-content/uploads/2018/10/Tracking.pdf)
+
+[Adaptive Pure Pursuit](https://www.chiefdelphi.com/t/paper-implementation-of-the-adaptive-pure-pursuit-controller/166552)
+
 ## Libraries for PROS
 
 [Okapilib](https://okapilib.github.io/OkapiLib/index.html)
