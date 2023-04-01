@@ -28,3 +28,15 @@
 [EZ Template](https://github.com/EZ-Robotics/EZ-Template)
 
 [LemLib](https://github.com/LemLib/LemLib)
+
+## High Quality Robot Code
+
+[](https://github.com/theol0403/lib7842)
+
+[](https://github.com/Ryan4253/4253B-Tipping-Point-Worlds)
+
+[](https://github.com/vexcode-2020/Team_23880E-Skills-Code)
+
+[](https://github.com/nickmertin/5225A-2017-2018)
+
+[](https://github.com/vexcode-2019/Team_7K_robotics)
